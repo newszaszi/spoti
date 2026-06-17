@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notion Spotify Sötét Widget</title>
+    <title>Tökéletes Notion Spotify Widget</title>
     <style>
-        /* Teljesen rásimítjuk a widgetet a Notion hátterére margók nélkül */
+        /* A böngésző sötét módjának kikényszerítése */
+        :root {
+            color-scheme: dark;
+        }
+
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: #191919; /* A Notion sötét módjának pontos háttérszíne */
+            /* Befesti a "vásznat" a Notion színére, így a kerek sarkok mögött sötétség lesz */
+            background-color: #191919; 
             overflow: hidden;
         }
 
-        /* Az iframe kitölti a rendelkezésre álló helyet, így a Notionben szabadon átméretezheted */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
+            /* Átlátszó háttér az iframe-nek */
+            background-color: transparent; 
             display: block;
-            border-radius: 12px; /* Lekerekített sarkok esztétikus megjelenésért */
+            border-radius: 12px; /* Spotify-hoz igazított vágás */
         }
     </style>
 </head>
 <body>
 
     <iframe 
-        src="https://open.spotify.com/embed/playlist/7wP5Zis77zVofJ5YgTst9n?utm_source=generator&theme=0" 
+        src="https://open.spotify.com/playlist/43dXg6MFDkyIrSa513n5gD?si=MTAjO9RiQamO4Tue2RTb4w&pi=bixRMaEUShKi_?theme=0" 
+        allowtransparency="true"
         allowfullscreen="" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy">
